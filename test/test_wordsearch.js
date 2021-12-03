@@ -35,4 +35,29 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("should return true if the word is present vertically", function() {
+    const result = wordSearch([
+      ['A', 'S', 'Y', 'H'],
+      ['W', 'E', 'F', 'M'],
+      ['C', 'I', 'C', 'J'],
+      ['F', 'N', 'F', 'T']
+    ], 'YFCF')
+ 
+    assert.isTrue(result);
+  });
+
+  it("should return false if the word is not present", function() {
+    const result = wordSearch([
+      ['A', 'S', 'Y', 'H'],
+      ['W', 'E', 'F', 'M'],
+      ['C', 'I', 'C', 'J'],
+      ['F', 'N', 'F', 'T']
+    ], 'CICK')
+ 
+    assert.isFalse(result);
+  });
+
+
+
 });
